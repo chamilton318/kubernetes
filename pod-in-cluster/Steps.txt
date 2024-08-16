@@ -1,0 +1,5 @@
+1. create namespace - oc new-project xv-assessment
+2. create sa - oc create sa xv-assessment-sa
+3. cluster-admin - oc adm policy add-cluster-role-to-user cluster-admin -Z xv-assessment-sa
+4. secret yaml - oc apply -f secret.yaml - update dockerconfigjson base64 encoded
+5. deploy yaml - oc apply -f deployment.yaml
